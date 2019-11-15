@@ -24,15 +24,35 @@ export const postAddPatient = async (req, res) => {
 };
 
 export const patientDetail = (req, res) => {
-    res.render("patient-detail");
+    const {
+        params: { id }
+    } = req;
+    res.render("patient-detail", { id });
 };
 
 export const chart = (req, res) => {
     res.render("chart");
 };
 
-export const sendChart = (req, res) => {
-    res.render("send-chart");
+export const sendChart = async (req, res) => {
+    const {
+        body,
+        params: { id }
+    } = req;
+    let result = null;
+    if (body["1"]) {
+        result = 1;
+    } else if (body["2"]) {
+        result = 2;
+    } else {
+        result = 0;
+    }
+    try {
+        await Patient.findOneAndUpdate({ _id: id }, { chartNum: result });
+    } catch (error) {
+        console.log(error);
+    }
+    res.redirect(routes.patient);
 };
 
 export const viewName = async (req, res) => {

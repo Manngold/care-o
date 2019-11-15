@@ -20,8 +20,8 @@ globalRouter.get(routes.chart, chart);
 globalRouter.get(routes.addPatient, getAddPatient);
 globalRouter.post(routes.addPatient, postAddPatient);
 
-globalRouter.get(routes.patientDetail, patientDetail);
-globalRouter.get(routes.sendChart, sendChart);
+globalRouter.get(routes.patientDetail(), patientDetail);
+globalRouter.post(routes.sendChart(), sendChart);
 
 globalRouter.get(routes.deletePatient(), deletePatient);
 
