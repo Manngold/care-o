@@ -2,5 +2,6 @@
     ul
         each patient in patients
             li=patient.name+patient.sex+patient.age
-                a(href="/patientDetail") View Detail
-                a(href="/sendChart") Send Chart
+                a(href=routes.patientDetail) View Detail
+                a(href=routes.sendChart) Send Chart
+                a(href=routes.deletePatient(patient.id)) Delete
