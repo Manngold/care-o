@@ -1,0 +1,31 @@
+{
+    "name": "care-o",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon --exec babel-node init.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Manngold/care-o.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Manngold/care-o/issues"
+    },
+    "homepage": "https://github.com/Manngold/care-o#readme",
+    "dependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/node": "^7.6.3",
+        "@babel/preset-env": "^7.6.3",
+        "body-parser": "^1.19.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.7.7",
+        "nodemon": "^1.19.4",
+        "pug": "^2.0.4"
+    }
+}
